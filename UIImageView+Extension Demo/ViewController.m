@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIImageView+Extension.h"
 
 @interface ViewController ()
 
@@ -16,14 +17,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)changeCornerRadius:(UIStepper *)sender {
+    [_imageView setImageCornerRadius:sender.value];
+    _cornerRadiusLabel.text = [NSString stringWithFormat:@"%d", (int)sender.value];
 }
 
+- (IBAction)changeShadowRadius:(UIStepper *)sender {
+    [_imageView changeShadowRadius:sender.value];
+    _shadowRadiusLabel.text = [NSString stringWithFormat:@"%d", (int)sender.value];
+}
+
+- (IBAction)changeShadowXOffset:(UIStepper *)sender {
+    [_imageView changeShadowXOffset:sender.value];
+    _shadowXOffsetLabel.text = [NSString stringWithFormat:@"%d", (int)sender.value];
+}
+
+- (IBAction)changeShadowYOffset:(UIStepper *)sender {
+    [_imageView changeShadowYOffset:sender.value];
+    _shadowYOffsetLabel.text = [NSString stringWithFormat:@"%d", (int)sender.value];
+}
+
+- (IBAction)changeShadowColor:(UISegmentedControl *)sender {
+    switch (sender.selectedSegmentIndex) {
+        case 0:
+            [_imageView changeShadowColor:[UIColor darkGrayColor]];
+            break;
+        case 1:
+            [_imageView changeShadowColor:[UIColor redColor]];
+            break;
+        case 2:
+            [_imageView changeShadowColor:[UIColor yellowColor]];
+            break;
+        case 3:
+            [_imageView changeShadowColor:[UIColor blueColor]];
+            break;
+        default:
+            break;
+    }
+}
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E42425711E27AFB60052A669 /* demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E42425701E27AFB60052A669 /* demo.jpg */; };
 		E443BD061E2769B9006140E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E443BD051E2769B9006140E8 /* main.m */; };
 		E443BD091E2769B9006140E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E443BD081E2769B9006140E8 /* AppDelegate.m */; };
 		E443BD0C1E2769B9006140E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E443BD0B1E2769B9006140E8 /* ViewController.m */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E42425701E27AFB60052A669 /* demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo.jpg; sourceTree = "<group>"; };
 		E443BD011E2769B9006140E8 /* UIImageView+Extension Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIImageView+Extension Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E443BD051E2769B9006140E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E443BD071E2769B9006140E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		E443BD041E2769B9006140E8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E42425701E27AFB60052A669 /* demo.jpg */,
 				E443BD051E2769B9006140E8 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -224,6 +227,7 @@
 				E4E1C6F11E278FCC00A62D66 /* UIImageView+Extension.podspec in Resources */,
 				E443BD111E2769B9006140E8 /* Assets.xcassets in Resources */,
 				E443BD0F1E2769B9006140E8 /* Main.storyboard in Resources */,
+				E42425711E27AFB60052A669 /* demo.jpg in Resources */,
 				E4E1C6F31E278FFF00A62D66 /* LICENSE.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
