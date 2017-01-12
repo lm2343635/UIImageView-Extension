@@ -16,8 +16,10 @@
 		E443BD141E2769B9006140E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E443BD121E2769B9006140E8 /* LaunchScreen.storyboard */; };
 		E443BD1F1E2769BA006140E8 /* UIImageView_Extension_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E443BD1E1E2769BA006140E8 /* UIImageView_Extension_DemoTests.m */; };
 		E443BD3D1E276ABD006140E8 /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E443BD3C1E276ABD006140E8 /* UIImageView+Extension.m */; };
+		E4CA26001E27CC0A007D51C8 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E4CA25FF1E27CC0A007D51C8 /* README.md */; };
+		E4CA26021E27D294007D51C8 /* Screenshoots in Resources */ = {isa = PBXBuildFile; fileRef = E4CA26011E27D294007D51C8 /* Screenshoots */; };
 		E4E1C6F11E278FCC00A62D66 /* UIImageView+Extension.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E4E1C6F01E278FCC00A62D66 /* UIImageView+Extension.podspec */; };
-		E4E1C6F31E278FFF00A62D66 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = E4E1C6F21E278FFF00A62D66 /* LICENSE.md */; };
+		E4E1C6F31E278FFF00A62D66 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E4E1C6F21E278FFF00A62D66 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +49,10 @@
 		E443BD201E2769BA006140E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E443BD3B1E276ABD006140E8 /* UIImageView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Extension.h"; sourceTree = "<group>"; };
 		E443BD3C1E276ABD006140E8 /* UIImageView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Extension.m"; sourceTree = "<group>"; };
+		E4CA25FF1E27CC0A007D51C8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E4CA26011E27D294007D51C8 /* Screenshoots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Screenshoots; sourceTree = "<group>"; };
 		E4E1C6F01E278FCC00A62D66 /* UIImageView+Extension.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIImageView+Extension.podspec"; sourceTree = "<group>"; };
-		E4E1C6F21E278FFF00A62D66 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		E4E1C6F21E278FFF00A62D66 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		E443BCF81E2769B9006140E8 = {
 			isa = PBXGroup;
 			children = (
+				E4CA26011E27D294007D51C8 /* Screenshoots */,
 				E4E1C6EF1E278F9900A62D66 /* Podspec */,
 				E443BD281E2769BA006140E8 /* UIImageView+Extension */,
 				E443BD031E2769B9006140E8 /* UIImageView+Extension Demo */,
@@ -135,7 +140,8 @@
 		E4E1C6EF1E278F9900A62D66 /* Podspec */ = {
 			isa = PBXGroup;
 			children = (
-				E4E1C6F21E278FFF00A62D66 /* LICENSE.md */,
+				E4E1C6F21E278FFF00A62D66 /* LICENSE */,
+				E4CA25FF1E27CC0A007D51C8 /* README.md */,
 				E4E1C6F01E278FCC00A62D66 /* UIImageView+Extension.podspec */,
 			);
 			name = Podspec;
@@ -223,12 +229,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4CA26021E27D294007D51C8 /* Screenshoots in Resources */,
 				E443BD141E2769B9006140E8 /* LaunchScreen.storyboard in Resources */,
 				E4E1C6F11E278FCC00A62D66 /* UIImageView+Extension.podspec in Resources */,
 				E443BD111E2769B9006140E8 /* Assets.xcassets in Resources */,
 				E443BD0F1E2769B9006140E8 /* Main.storyboard in Resources */,
 				E42425711E27AFB60052A669 /* demo.jpg in Resources */,
-				E4E1C6F31E278FFF00A62D66 /* LICENSE.md in Resources */,
+				E4E1C6F31E278FFF00A62D66 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +255,7 @@
 			files = (
 				E443BD0C1E2769B9006140E8 /* ViewController.m in Sources */,
 				E443BD091E2769B9006140E8 /* AppDelegate.m in Sources */,
+				E4CA26001E27CC0A007D51C8 /* README.md in Sources */,
 				E443BD3D1E276ABD006140E8 /* UIImageView+Extension.m in Sources */,
 				E443BD061E2769B9006140E8 /* main.m in Sources */,
 			);

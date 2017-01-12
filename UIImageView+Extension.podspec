@@ -1,16 +1,17 @@
 Pod::Spec.new do |s|
 	s.name         = "UIImageView+Extension"
 	s.version      = "0.1.0"
-	s.summary      = "A extension category for UIImageView."
+	s.summary      = "A simple UIImageView category with some extension functions."
 
 	s.description  = <<-DESC
 	# Features
-	- Add border for image view
-	- Add shadow for image view
+    - Supports Interface Builder.
+	- Set border radius for image view.
+	- Set shadow for image view.
 	DESC
 
 	s.homepage     = "https://github.com/lm2343635/UIImageView-Extension"
-	s.license      = { :type => "MIT", :file => "LICENSE.md" }
+	s.license      = { :type => "MIT", :file => "LICENSE" }
 	s.author             = { "Meng Li" => "lm2343635@126.com" }
 	s.social_media_url   = "http://fczm.pw"
 
