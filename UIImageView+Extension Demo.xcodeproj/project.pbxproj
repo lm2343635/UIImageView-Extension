@@ -14,18 +14,11 @@
 		E443BD111E2769B9006140E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E443BD101E2769B9006140E8 /* Assets.xcassets */; };
 		E443BD141E2769B9006140E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E443BD121E2769B9006140E8 /* LaunchScreen.storyboard */; };
 		E443BD1F1E2769BA006140E8 /* UIImageView_Extension_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E443BD1E1E2769BA006140E8 /* UIImageView_Extension_DemoTests.m */; };
-		E443BD2A1E2769BA006140E8 /* UIImageView_Extension_DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E443BD291E2769BA006140E8 /* UIImageView_Extension_DemoUITests.m */; };
+		E443BD3D1E276ABD006140E8 /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E443BD3C1E276ABD006140E8 /* UIImageView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		E443BD1B1E2769BA006140E8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E443BCF91E2769B9006140E8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E443BD001E2769B9006140E8;
-			remoteInfo = "UIImageView+Extension Demo";
-		};
-		E443BD261E2769BA006140E8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E443BCF91E2769B9006140E8 /* Project object */;
 			proxyType = 1;
@@ -48,9 +41,8 @@
 		E443BD1A1E2769BA006140E8 /* UIImageView+Extension DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UIImageView+Extension DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E443BD1E1E2769BA006140E8 /* UIImageView_Extension_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIImageView_Extension_DemoTests.m; sourceTree = "<group>"; };
 		E443BD201E2769BA006140E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E443BD251E2769BA006140E8 /* UIImageView+Extension DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UIImageView+Extension DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E443BD291E2769BA006140E8 /* UIImageView_Extension_DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIImageView_Extension_DemoUITests.m; sourceTree = "<group>"; };
-		E443BD2B1E2769BA006140E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E443BD3B1E276ABD006140E8 /* UIImageView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Extension.h"; sourceTree = "<group>"; };
+		E443BD3C1E276ABD006140E8 /* UIImageView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,22 +60,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E443BD221E2769BA006140E8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		E443BCF81E2769B9006140E8 = {
 			isa = PBXGroup;
 			children = (
+				E443BD281E2769BA006140E8 /* UIImageView+Extension */,
 				E443BD031E2769B9006140E8 /* UIImageView+Extension Demo */,
 				E443BD1D1E2769BA006140E8 /* UIImageView+Extension DemoTests */,
-				E443BD281E2769BA006140E8 /* UIImageView+Extension DemoUITests */,
 				E443BD021E2769B9006140E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,7 +78,6 @@
 			children = (
 				E443BD011E2769B9006140E8 /* UIImageView+Extension Demo.app */,
 				E443BD1A1E2769BA006140E8 /* UIImageView+Extension DemoTests.xctest */,
-				E443BD251E2769BA006140E8 /* UIImageView+Extension DemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,13 +115,13 @@
 			path = "UIImageView+Extension DemoTests";
 			sourceTree = "<group>";
 		};
-		E443BD281E2769BA006140E8 /* UIImageView+Extension DemoUITests */ = {
+		E443BD281E2769BA006140E8 /* UIImageView+Extension */ = {
 			isa = PBXGroup;
 			children = (
-				E443BD291E2769BA006140E8 /* UIImageView_Extension_DemoUITests.m */,
-				E443BD2B1E2769BA006140E8 /* Info.plist */,
+				E443BD3B1E276ABD006140E8 /* UIImageView+Extension.h */,
+				E443BD3C1E276ABD006140E8 /* UIImageView+Extension.m */,
 			);
-			path = "UIImageView+Extension DemoUITests";
+			path = "UIImageView+Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,24 +162,6 @@
 			productReference = E443BD1A1E2769BA006140E8 /* UIImageView+Extension DemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E443BD241E2769BA006140E8 /* UIImageView+Extension DemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E443BD341E2769BA006140E8 /* Build configuration list for PBXNativeTarget "UIImageView+Extension DemoUITests" */;
-			buildPhases = (
-				E443BD211E2769BA006140E8 /* Sources */,
-				E443BD221E2769BA006140E8 /* Frameworks */,
-				E443BD231E2769BA006140E8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E443BD271E2769BA006140E8 /* PBXTargetDependency */,
-			);
-			name = "UIImageView+Extension DemoUITests";
-			productName = "UIImageView+Extension DemoUITests";
-			productReference = E443BD251E2769BA006140E8 /* UIImageView+Extension DemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -210,11 +176,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					E443BD191E2769BA006140E8 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = E443BD001E2769B9006140E8;
-					};
-					E443BD241E2769BA006140E8 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E443BD001E2769B9006140E8;
@@ -236,7 +197,6 @@
 			targets = (
 				E443BD001E2769B9006140E8 /* UIImageView+Extension Demo */,
 				E443BD191E2769BA006140E8 /* UIImageView+Extension DemoTests */,
-				E443BD241E2769BA006140E8 /* UIImageView+Extension DemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,13 +219,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E443BD231E2769BA006140E8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -275,6 +228,7 @@
 			files = (
 				E443BD0C1E2769B9006140E8 /* ViewController.m in Sources */,
 				E443BD091E2769B9006140E8 /* AppDelegate.m in Sources */,
+				E443BD3D1E276ABD006140E8 /* UIImageView+Extension.m in Sources */,
 				E443BD061E2769B9006140E8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,14 +241,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E443BD211E2769BA006140E8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E443BD2A1E2769BA006140E8 /* UIImageView_Extension_DemoUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -302,11 +248,6 @@
 			isa = PBXTargetDependency;
 			target = E443BD001E2769B9006140E8 /* UIImageView+Extension Demo */;
 			targetProxy = E443BD1B1E2769BA006140E8 /* PBXContainerItemProxy */;
-		};
-		E443BD271E2769BA006140E8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E443BD001E2769B9006140E8 /* UIImageView+Extension Demo */;
-			targetProxy = E443BD261E2769BA006140E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -466,28 +407,6 @@
 			};
 			name = Release;
 		};
-		E443BD351E2769BA006140E8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "UIImageView+Extension DemoUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pw.fczm.app.UIImageView-Extension-DemoUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "UIImageView+Extension Demo";
-			};
-			name = Debug;
-		};
-		E443BD361E2769BA006140E8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "UIImageView+Extension DemoUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pw.fczm.app.UIImageView-Extension-DemoUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "UIImageView+Extension Demo";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -507,6 +426,7 @@
 				E443BD301E2769BA006140E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E443BD311E2769BA006140E8 /* Build configuration list for PBXNativeTarget "UIImageView+Extension DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -515,14 +435,7 @@
 				E443BD331E2769BA006140E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		E443BD341E2769BA006140E8 /* Build configuration list for PBXNativeTarget "UIImageView+Extension DemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E443BD351E2769BA006140E8 /* Debug */,
-				E443BD361E2769BA006140E8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
