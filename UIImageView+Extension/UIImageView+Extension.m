@@ -56,7 +56,7 @@
 
 #pragma mark - Shadow
 // This method should be invoked before you invoke methods including changeShadowColor:color,
-// changeShadowXOffset:xOffset, changeShadowYOffset:yOffset and changeShadowRadius:(CGFloat)radius.
+// changeShadowXOffset:xOffset, changeShadowYOffset:yOffset and changeShadowRadius:radius.
 - (void)setShadowWithColor:(UIColor *)color
              shadowXOffset:(CGFloat)xOffset
              shadowYOffset:(CGFloat)yOffset

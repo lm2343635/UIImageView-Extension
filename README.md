@@ -23,6 +23,44 @@ pod 'UILabel+Copyable', '~> 1.0.0'
 
 # Usage
 
-If you just want to set features in Interface Builder, just do it in Interface Builder, you need not to do anything.
+- If you just want to set features in Interface Builder, just do it in Interface Builder, you need not to do anything.
+
 ![Interface Builder Guide](https://raw.githubusercontent.com/lm2343635/UIImageView-Extension/master/Screenshoots/InterfaceBuilderGuide.png)
-If you want to control your image view in your program, you should import the category header: `#import "UIImageView+Extension.h"` to your `.h` or `.m` file.
+
+- If you want to control your image view in your program, you should import the category header: `#import "UIImageView+Extension.h"` to your `.h` or `.m` file.
+
+```objective-c
+// Set corner radius.
+[_imageView setImageCornerRadius:5.0];
+
+// Init a shadow with color, offset and raduis.
+[_imageView setShadowWithColor:[UIColor darkGrayColor]
+                 shadowXOffset:0
+                 shadowYOffset:0
+                  shadowRadius:5.0];
+
+// Change shadow color, offset and radius.
+[_imageView changeShadowColor:[UIColor redColor]];
+[_imageView changeShadowRadius:1.0];
+[_imageView changeShadowXOffset:1.0];
+[_imageView changeShadowYOffset:1.0];
+```
+
+- The method `setShadowWithColor:shadowXOffset:shadowYOffset:shadowRadius:`should be invoked before you invoke methods including `changeShadowColor:color`, `changeShadowXOffset:xOffset`, `changeShadowYOffset:yOffset` and `changeShadowRadius:radius`.
+
+# Demo App
+A demo project showing how to use it from a storyboard in contained in this repository.
+
+![Demo App](https://raw.githubusercontent.com/lm2343635/UIImageView-Extension/master/Screenshoots/DemoApp.png)
+
+# Change log
+* version 0.2.0
+  * Supports Interface Builder.
+  * Supports changing shadow style.
+
+* version 0.1.0
+  * Set corner radius and shadow for UIImageView.
+
+# License
+
+UIImageView+Extension is licensed under the terms of the MIT License. Please see the [LICENSE](LICENSE) file for full details.

@@ -44,7 +44,7 @@
 // Set image corner radius.
 - (void)setImageCornerRadius:(CGFloat)radius;
 
-// Init a shadow with colot, offset and raduis.
+// Init a shadow with color, offset and raduis.
 - (void)setShadowWithColor:(UIColor *)color
              shadowXOffset:(CGFloat)xOffset
              shadowYOffset:(CGFloat)yOffset
