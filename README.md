@@ -3,7 +3,7 @@ UIImageView+Extension ![Supported Platforms](https://img.shields.io/cocoapods/p/
 A simple UIImageView category with some extension functions.
 
 # Features
-- Supports Interface Builder.
+- Support Interface Builder.
 - Set border radius for image view.
 - Set shadow for image view.
 
@@ -49,14 +49,14 @@ pod 'UIImageView+Extension', '~> 0.2'
 - The method `setShadowWithColor:shadowXOffset:shadowYOffset:shadowRadius:`should be invoked before you invoke methods including `changeShadowColor:color`, `changeShadowXOffset:xOffset`, `changeShadowYOffset:yOffset` and `changeShadowRadius:radius`.
 
 # Demo App
-A demo project showing how to use it from a storyboard in contained in this repository.
+A demo project contained in this repository shows how to use it from a storyboard.
 
 ![Demo App](https://raw.githubusercontent.com/lm2343635/UIImageView-Extension/master/Screenshoots/DemoApp.png)
 
 # Change log
 * version 0.2.0
-  * Supports Interface Builder.
-  * Supports changing shadow style.
+  * Support Interface Builder.
+  * Support changing shadow style.
 
 * version 0.1.0
   * Set corner radius and shadow for UIImageView.
