@@ -13,7 +13,7 @@ A simple UIImageView category with some extension functions.
 Installing UIImageView+Extension by [CocoaPods](http://cocoapods.org/). 
 
 ```ruby
-pod 'UILabel+Copyable', '~> 1.0.0'
+pod 'UIImageView+Extension', '~> 0.2'
 ```
 ### Old-fashioned way
 
