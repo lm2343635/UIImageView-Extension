@@ -40,6 +40,8 @@
 // UIView, a shadow container
 @property (strong, nonatomic) UIView *shadowContainer;
 
+// Rotate state
+@property (nonatomic) BOOL rotating;
 
 // Set image corner radius.
 - (void)setImageCornerRadius:(CGFloat)radius;
@@ -55,5 +57,11 @@
 - (BOOL)changeShadowXOffset:(CGFloat)xOffset;
 - (BOOL)changeShadowYOffset:(CGFloat)yOffset;
 - (BOOL)changeShadowRadius:(CGFloat)radius;
+
+// Start rotate infinitely
+- (void)startRotate:(double)secondPerRound withClockwise:(BOOL)clockwise;
+
+// Stop rotate.
+- (void)stopRotate;
 
 @end

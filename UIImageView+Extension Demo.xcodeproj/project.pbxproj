@@ -18,6 +18,8 @@
 		E443BD3D1E276ABD006140E8 /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E443BD3C1E276ABD006140E8 /* UIImageView+Extension.m */; };
 		E4CA26001E27CC0A007D51C8 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E4CA25FF1E27CC0A007D51C8 /* README.md */; };
 		E4CA26021E27D294007D51C8 /* Screenshoots in Resources */ = {isa = PBXBuildFile; fileRef = E4CA26011E27D294007D51C8 /* Screenshoots */; };
+		E4CA26051E290AD9007D51C8 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CA26041E290AD9007D51C8 /* TableViewController.m */; };
+		E4CA26081E2910C5007D51C8 /* RotateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CA26071E2910C5007D51C8 /* RotateViewController.m */; };
 		E4E1C6F11E278FCC00A62D66 /* UIImageView+Extension.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E4E1C6F01E278FCC00A62D66 /* UIImageView+Extension.podspec */; };
 		E4E1C6F31E278FFF00A62D66 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E4E1C6F21E278FFF00A62D66 /* LICENSE */; };
 /* End PBXBuildFile section */
@@ -51,6 +53,10 @@
 		E443BD3C1E276ABD006140E8 /* UIImageView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Extension.m"; sourceTree = "<group>"; };
 		E4CA25FF1E27CC0A007D51C8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E4CA26011E27D294007D51C8 /* Screenshoots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Screenshoots; sourceTree = "<group>"; };
+		E4CA26031E290AD9007D51C8 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		E4CA26041E290AD9007D51C8 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		E4CA26061E2910C5007D51C8 /* RotateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateViewController.h; sourceTree = "<group>"; };
+		E4CA26071E2910C5007D51C8 /* RotateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotateViewController.m; sourceTree = "<group>"; };
 		E4E1C6F01E278FCC00A62D66 /* UIImageView+Extension.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIImageView+Extension.podspec"; sourceTree = "<group>"; };
 		E4E1C6F21E278FFF00A62D66 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +107,10 @@
 				E443BD081E2769B9006140E8 /* AppDelegate.m */,
 				E443BD0A1E2769B9006140E8 /* ViewController.h */,
 				E443BD0B1E2769B9006140E8 /* ViewController.m */,
+				E4CA26061E2910C5007D51C8 /* RotateViewController.h */,
+				E4CA26071E2910C5007D51C8 /* RotateViewController.m */,
+				E4CA26031E290AD9007D51C8 /* TableViewController.h */,
+				E4CA26041E290AD9007D51C8 /* TableViewController.m */,
 				E443BD0D1E2769B9006140E8 /* Main.storyboard */,
 				E443BD101E2769B9006140E8 /* Assets.xcassets */,
 				E443BD121E2769B9006140E8 /* LaunchScreen.storyboard */,
@@ -254,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E443BD0C1E2769B9006140E8 /* ViewController.m in Sources */,
+				E4CA26081E2910C5007D51C8 /* RotateViewController.m in Sources */,
+				E4CA26051E290AD9007D51C8 /* TableViewController.m in Sources */,
 				E443BD091E2769B9006140E8 /* AppDelegate.m in Sources */,
 				E4CA26001E27CC0A007D51C8 /* README.md in Sources */,
 				E443BD3D1E276ABD006140E8 /* UIImageView+Extension.m in Sources */,

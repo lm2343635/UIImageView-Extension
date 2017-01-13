@@ -116,6 +116,23 @@
     return YES;
 }
 
+#pragma mark - Rotate
+- (void)startRotate:(double)secondPerRound withClockwise:(BOOL)clockwise {
+    CABasicAnimation *rotationAnimation;
+    rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 * (clockwise? 1: -1)];
+    rotationAnimation.duration = secondPerRound;
+    rotationAnimation.cumulative = YES;
+    rotationAnimation.repeatCount = MAXFLOAT;
+    [self.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
+    self.rotating = YES;
+}
+
+- (void)stopRotate {
+    [self.layer removeAllAnimations];
+    self.rotating = NO;
+}
+
 #pragma mark - Properties
 - (UIView *)shadowContainer {
     return objc_getAssociatedObject(self, @selector(shadowContainer));
@@ -174,6 +191,16 @@
 - (void)setShadowRadius:(CGFloat)shadowRadius {
     if (self.shadowRadius != shadowRadius) {
         objc_setAssociatedObject(self, @selector(shadowRadius), @(shadowRadius), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+}
+
+- (BOOL)rotating {
+    return [objc_getAssociatedObject(self, @selector(rotating)) boolValue];
+}
+
+- (void)setRotating:(BOOL)rotating {
+    if (self.rotating != rotating) {
+        objc_setAssociatedObject(self, @selector(rotating), @(rotating), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
 }
 
