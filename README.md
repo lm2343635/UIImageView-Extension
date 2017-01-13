@@ -6,6 +6,7 @@ A simple UIImageView category with some extension functions.
 - Support Interface Builder.
 - Set border radius for image view.
 - Set shadow for image view.
+- Rotate image view.
 
 # Installation
 
@@ -29,10 +30,18 @@ pod 'UIImageView+Extension', '~> 0.2'
 
 - If you want to control your image view in your program, you should import the category header: `#import "UIImageView+Extension.h"` to your `.h` or `.m` file.
 
+# API Document
+### Corner Radius
+
 ```objective-c
 // Set corner radius.
 [_imageView setImageCornerRadius:5.0];
+```
 
+### Shadow
+The method `setShadowWithColor:shadowXOffset:shadowYOffset:shadowRadius:`should be invoked before you invoke methods including `changeShadowColor:color`, `changeShadowXOffset:xOffset`, `changeShadowYOffset:yOffset` and `changeShadowRadius:radius`.
+
+```objective-c
 // Init a shadow with color, offset and raduis.
 [_imageView setShadowWithColor:[UIColor darkGrayColor]
                  shadowXOffset:0
@@ -46,14 +55,26 @@ pod 'UIImageView+Extension', '~> 0.2'
 [_imageView changeShadowYOffset:1.0];
 ```
 
-- The method `setShadowWithColor:shadowXOffset:shadowYOffset:shadowRadius:`should be invoked before you invoke methods including `changeShadowColor:color`, `changeShadowXOffset:xOffset`, `changeShadowYOffset:yOffset` and `changeShadowRadius:radius`.
+### Rotate
+You can rotate a image view infinitely by the method `startRotate:withClockwise:`, the first parameter is rotation time per 1 round, the second parameter decides this rotation is clockwise or anticlockwise. 
+
+```objective-c
+// Init a shadow with color, offset and raduis.
+[_imageView startRotate:2 withClockwise:NO];
+
+// Change shadow color, offset and radius.
+[_imageView stopRotate];
+```
 
 # Demo App
-A demo project contained in this repository shows how to use it from a storyboard.
+A demo project contained in this repository shows how to use UIImageView+Extension from a storyboard.
 
 ![Demo App](https://raw.githubusercontent.com/lm2343635/UIImageView-Extension/master/Screenshoots/DemoApp.png)
 
 # Change log
+* version 0.2.1
+  * Rotate image view infinitely.
+
 * version 0.2.0
   * Support Interface Builder.
   * Support changing shadow style.
