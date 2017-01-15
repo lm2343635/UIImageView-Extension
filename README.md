@@ -71,6 +71,8 @@ A demo project contained in this repository shows how to use UIImageView+Extensi
 
 ![Demo App](https://raw.githubusercontent.com/lm2343635/UIImageView-Extension/master/Screenshoots/DemoApp.png)
 
+Another demo app: I used this extension in my app Rate Assistant, you can download this app from App Store: https://itunes.apple.com/app/murate/id1139573801 to see this demo, it is an open source app, you can get the source code from https://github.com/MuShare/Rate-iOS
+
 # Change log
 * version 0.2.1
   * Rotate image view infinitely.
