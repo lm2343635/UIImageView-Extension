@@ -35,8 +35,10 @@ pod 'UIImageView+Extension', '~> 0.2'
 
 ```objective-c
 // Set corner radius.
-[_imageView setImageCornerRadius:5.0];
+_imageView.cornerRadius = 10;
 ```
+
+The method `setImageCornerRadius:`(version 0.2.1 and before) cannot use in this version now.
 
 ### Shadow
 The method `setShadowWithColor:shadowXOffset:shadowYOffset:shadowRadius:`should be invoked before you invoke methods including `changeShadowColor:color`, `changeShadowXOffset:xOffset`, `changeShadowYOffset:yOffset` and `changeShadowRadius:radius`.
@@ -70,6 +72,8 @@ You can rotate a image view infinitely by the method `startRotate:withClockwise:
 A demo project contained in this repository shows how to use UIImageView+Extension from a storyboard.
 
 ![Demo App](https://raw.githubusercontent.com/lm2343635/UIImageView-Extension/master/Screenshoots/DemoApp.png)
+
+Another demo app: I used this extension in my app Rate Assistant, you can download this app from App Store: https://itunes.apple.com/app/murate/id1139573801 to see this demo, it is an open source app, you can get the source code from https://github.com/MuShare/Rate-iOS
 
 # Change log
 * version 0.2.1
