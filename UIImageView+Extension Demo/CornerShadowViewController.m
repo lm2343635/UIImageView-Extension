@@ -6,21 +6,21 @@
 //  Copyright © 2017 fczm.pw. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CornerShadowViewController.h"
 #import "UIImageView+Extension.h"
 
-@interface ViewController ()
+@interface CornerShadowViewController ()
 
 @end
 
-@implementation ViewController
+@implementation CornerShadowViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
 
 - (IBAction)changeCornerRadius:(UIStepper *)sender {
-    [_imageView setImageCornerRadius:sender.value];
+    _imageView.cornerRadius = sender.value;
     _cornerRadiusLabel.text = [NSString stringWithFormat:@"%d", (int)sender.value];
 }
 

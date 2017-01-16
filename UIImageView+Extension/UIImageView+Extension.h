@@ -43,6 +43,9 @@
 // Rotate state
 @property (nonatomic) BOOL rotating;
 
+// Circle state
+@property (nonatomic) IBInspectable BOOL circle;
+
 // Set image corner radius.
 - (void)setImageCornerRadius:(CGFloat)radius;
 

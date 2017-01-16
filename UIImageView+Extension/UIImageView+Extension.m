@@ -31,10 +31,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Set corner radius if it is large than 0
-    if (self.cornerRadius > 0) {
-        [self setImageCornerRadius:self.cornerRadius];
-    }
     // Set shadow if shadow color is not nil and shadow radiud is large than 0.
     if (self.shadowColor != nil && self.shadowRadius > 0) {
         [self setShadowWithColor:self.shadowColor
@@ -45,7 +41,7 @@
 }
 
 #pragma mark - Corner Radius
-- (void)setImageCornerRadius:(CGFloat)radius {
+- (void)setImageCornerRadius: (CGFloat)radius {
     self.layer.cornerRadius = radius;
     self.layer.masksToBounds = YES;
     // If shadow is exist, change shadow container's radius at same time.
@@ -133,6 +129,18 @@
     self.rotating = NO;
 }
 
+#pragma mark - Circle
+- (void)changeToCircle {
+    if (self.circle) {
+        CGFloat width = self.frame.size.width;
+        CGFloat height = self.frame.size.height;
+        CGFloat radius = (width > height ? height : width) / 2;
+        [self setImageCornerRadius:radius];
+    } else {
+        [self setImageCornerRadius:self.cornerRadius];
+    }
+}
+
 #pragma mark - Properties
 - (UIView *)shadowContainer {
     return objc_getAssociatedObject(self, @selector(shadowContainer));
@@ -151,6 +159,10 @@
 - (void)setCornerRadius:(CGFloat)cornerRadius {
     if (self.cornerRadius != cornerRadius) {
         objc_setAssociatedObject(self, @selector(cornerRadius), @(cornerRadius), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        // Only circle is NO can corner radius be setted.
+        if (!self.circle) {
+            [self setImageCornerRadius: cornerRadius];
+        }
     }
 }
 
@@ -201,6 +213,17 @@
 - (void)setRotating:(BOOL)rotating {
     if (self.rotating != rotating) {
         objc_setAssociatedObject(self, @selector(rotating), @(rotating), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+}
+
+- (BOOL)circle {
+    return [objc_getAssociatedObject(self, @selector(circle)) boolValue];
+}
+
+- (void)setCircle:(BOOL)circle {
+    if (self.circle != circle) {
+        objc_setAssociatedObject(self, @selector(circle), @(circle), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        [self changeToCircle];
     }
 }
 

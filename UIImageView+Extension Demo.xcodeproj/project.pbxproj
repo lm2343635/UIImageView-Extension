@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		E42425711E27AFB60052A669 /* demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E42425701E27AFB60052A669 /* demo.jpg */; };
+		E4305A321E2CF6BB00010B52 /* circle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E4305A311E2CF6BB00010B52 /* circle.jpg */; };
+		E4305A351E2CF71900010B52 /* CircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4305A341E2CF71900010B52 /* CircleViewController.m */; };
 		E443BD061E2769B9006140E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E443BD051E2769B9006140E8 /* main.m */; };
 		E443BD091E2769B9006140E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E443BD081E2769B9006140E8 /* AppDelegate.m */; };
-		E443BD0C1E2769B9006140E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E443BD0B1E2769B9006140E8 /* ViewController.m */; };
+		E443BD0C1E2769B9006140E8 /* CornerShadowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E443BD0B1E2769B9006140E8 /* CornerShadowViewController.m */; };
 		E443BD0F1E2769B9006140E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E443BD0D1E2769B9006140E8 /* Main.storyboard */; };
 		E443BD111E2769B9006140E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E443BD101E2769B9006140E8 /* Assets.xcassets */; };
 		E443BD141E2769B9006140E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E443BD121E2769B9006140E8 /* LaunchScreen.storyboard */; };
@@ -36,12 +38,15 @@
 
 /* Begin PBXFileReference section */
 		E42425701E27AFB60052A669 /* demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo.jpg; sourceTree = "<group>"; };
+		E4305A311E2CF6BB00010B52 /* circle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = circle.jpg; sourceTree = "<group>"; };
+		E4305A331E2CF71900010B52 /* CircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleViewController.h; sourceTree = "<group>"; };
+		E4305A341E2CF71900010B52 /* CircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleViewController.m; sourceTree = "<group>"; };
 		E443BD011E2769B9006140E8 /* UIImageView+Extension Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIImageView+Extension Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E443BD051E2769B9006140E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E443BD071E2769B9006140E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E443BD081E2769B9006140E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E443BD0A1E2769B9006140E8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E443BD0B1E2769B9006140E8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E443BD0A1E2769B9006140E8 /* CornerShadowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CornerShadowViewController.h; sourceTree = "<group>"; };
+		E443BD0B1E2769B9006140E8 /* CornerShadowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CornerShadowViewController.m; sourceTree = "<group>"; };
 		E443BD0E1E2769B9006140E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E443BD101E2769B9006140E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E443BD131E2769B9006140E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,6 +84,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E4305A361E2CF72100010B52 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4305A331E2CF71900010B52 /* CircleViewController.h */,
+				E4305A341E2CF71900010B52 /* CircleViewController.m */,
+				E443BD0A1E2769B9006140E8 /* CornerShadowViewController.h */,
+				E443BD0B1E2769B9006140E8 /* CornerShadowViewController.m */,
+				E4CA26061E2910C5007D51C8 /* RotateViewController.h */,
+				E4CA26071E2910C5007D51C8 /* RotateViewController.m */,
+				E4CA26031E290AD9007D51C8 /* TableViewController.h */,
+				E4CA26041E290AD9007D51C8 /* TableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		E443BCF81E2769B9006140E8 = {
 			isa = PBXGroup;
 			children = (
@@ -103,14 +123,9 @@
 		E443BD031E2769B9006140E8 /* UIImageView+Extension Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E4305A361E2CF72100010B52 /* Controller */,
 				E443BD071E2769B9006140E8 /* AppDelegate.h */,
 				E443BD081E2769B9006140E8 /* AppDelegate.m */,
-				E443BD0A1E2769B9006140E8 /* ViewController.h */,
-				E443BD0B1E2769B9006140E8 /* ViewController.m */,
-				E4CA26061E2910C5007D51C8 /* RotateViewController.h */,
-				E4CA26071E2910C5007D51C8 /* RotateViewController.m */,
-				E4CA26031E290AD9007D51C8 /* TableViewController.h */,
-				E4CA26041E290AD9007D51C8 /* TableViewController.m */,
 				E443BD0D1E2769B9006140E8 /* Main.storyboard */,
 				E443BD101E2769B9006140E8 /* Assets.xcassets */,
 				E443BD121E2769B9006140E8 /* LaunchScreen.storyboard */,
@@ -124,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				E42425701E27AFB60052A669 /* demo.jpg */,
+				E4305A311E2CF6BB00010B52 /* circle.jpg */,
 				E443BD051E2769B9006140E8 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -242,6 +258,7 @@
 				E4CA26021E27D294007D51C8 /* Screenshoots in Resources */,
 				E443BD141E2769B9006140E8 /* LaunchScreen.storyboard in Resources */,
 				E4E1C6F11E278FCC00A62D66 /* UIImageView+Extension.podspec in Resources */,
+				E4305A321E2CF6BB00010B52 /* circle.jpg in Resources */,
 				E443BD111E2769B9006140E8 /* Assets.xcassets in Resources */,
 				E443BD0F1E2769B9006140E8 /* Main.storyboard in Resources */,
 				E42425711E27AFB60052A669 /* demo.jpg in Resources */,
@@ -263,8 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E443BD0C1E2769B9006140E8 /* ViewController.m in Sources */,
+				E443BD0C1E2769B9006140E8 /* CornerShadowViewController.m in Sources */,
 				E4CA26081E2910C5007D51C8 /* RotateViewController.m in Sources */,
+				E4305A351E2CF71900010B52 /* CircleViewController.m in Sources */,
 				E4CA26051E290AD9007D51C8 /* TableViewController.m in Sources */,
 				E443BD091E2769B9006140E8 /* AppDelegate.m in Sources */,
 				E4CA26001E27CC0A007D51C8 /* README.md in Sources */,

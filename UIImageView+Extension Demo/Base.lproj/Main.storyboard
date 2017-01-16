@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X3J-mS-Xs9" id="pjc-qy-BHT">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THb-j7-4n1">
@@ -68,7 +68,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mo5-SO-2Md" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166" y="439"/>
+            <point key="canvasLocation" x="-282" y="537"/>
         </scene>
         <!--Rotate-->
         <scene sceneID="jgL-Ru-ZJu">
@@ -109,7 +109,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sho-xG-aJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1017" y="439"/>
+            <point key="canvasLocation" x="569" y="537"/>
+        </scene>
+        <!--Circle-->
+        <scene sceneID="9cF-cS-ZQx">
+            <objects>
+                <viewController id="H97-4E-ZKU" customClass="CircleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rCH-kD-gwE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xdv-xh-SWc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HHm-0C-glf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="914-pJ-ako">
+                                <rect key="frame" x="16" y="83" width="343" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="914-pJ-ako" secondAttribute="height" multiplier="1:1" id="Sd4-oL-vkA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oBR-hv-TRA">
+                                <rect key="frame" x="310" y="443" width="51" height="31"/>
+                                <connections>
+                                    <action selector="changeCircleState:" destination="H97-4E-ZKU" eventType="valueChanged" id="b5g-VI-GH4"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Circle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3p-Z2-53t">
+                                <rect key="frame" x="16" y="448" width="44" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="oBR-hv-TRA" secondAttribute="trailing" id="JXv-dZ-0Fr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="914-pJ-ako" secondAttribute="trailing" id="QBR-Vu-ZJE"/>
+                            <constraint firstItem="914-pJ-ako" firstAttribute="top" secondItem="rCH-kD-gwE" secondAttribute="bottom" constant="19" id="aph-uM-Fa2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="914-pJ-ako" secondAttribute="leading" id="jc5-f7-4gE"/>
+                            <constraint firstItem="oBR-hv-TRA" firstAttribute="top" secondItem="rCH-kD-gwE" secondAttribute="bottom" constant="379" id="kep-w2-8lb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Circle" id="HEh-G3-yT4"/>
+                    <connections>
+                        <outlet property="imageView" destination="914-pJ-ako" id="6Wd-hL-tT1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iEi-pc-vro" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1429.5999999999999" y="536.58170914542734"/>
         </scene>
         <!--UIImageView+Extension Demo-->
         <scene sceneID="9pI-hF-0af">
@@ -126,7 +182,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wx7-Nf-UUa" id="zoZ-DM-Jvq">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Corner radius and shadow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsP-bU-xGR">
@@ -146,7 +202,7 @@
                                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eox-ST-XG8" id="dfU-hI-Iqa">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Table view controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjD-iu-UgH">
@@ -166,7 +222,7 @@
                                         <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eo2-eY-tMX" id="Sav-nA-wc0">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rotate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jd2-gH-nF4">
@@ -180,6 +236,26 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="zCi-4a-vv9" kind="push" id="fjs-Ef-XnK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Bc0-5G-HWF">
+                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bc0-5G-HWF" id="K5F-1K-lth">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Circle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6W3-qN-0Wh">
+                                                    <rect key="frame" x="17" y="11" width="44" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="H97-4E-ZKU" kind="push" id="bDm-2E-5Ky"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -199,7 +275,7 @@
         <!--Corner radius and shadow-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CornerShadowViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -347,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-647" y="439"/>
+            <point key="canvasLocation" x="-1095" y="537"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xCP-eR-D7b">
@@ -367,6 +443,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="circle.jpg" width="1200" height="1200"/>
         <image name="demo.jpg" width="900" height="597"/>
         <image name="loading" width="100" height="100"/>
     </resources>
