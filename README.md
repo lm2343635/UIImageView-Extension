@@ -35,8 +35,10 @@ pod 'UIImageView+Extension', '~> 0.2'
 
 ```objective-c
 // Set corner radius.
-[_imageView setImageCornerRadius:5.0];
+_imageView.cornerRadius = 10;
 ```
+
+The method `setImageCornerRadius:`(version 0.2.1 and before) cannot use in this version now.
 
 ### Shadow
 The method `setShadowWithColor:shadowXOffset:shadowYOffset:shadowRadius:`should be invoked before you invoke methods including `changeShadowColor:color`, `changeShadowXOffset:xOffset`, `changeShadowYOffset:yOffset` and `changeShadowRadius:radius`.
