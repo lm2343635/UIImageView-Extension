@@ -7,6 +7,7 @@ A simple UIImageView category with some extension functions.
 - Set border radius for image view.
 - Set shadow for image view.
 - Rotate image view.
+- Set image view to circle.
 
 # Installation
 
@@ -16,7 +17,7 @@ Installing UIImageView+Extension by [CocoaPods](http://cocoapods.org/).
 ```ruby
 pod 'UIImageView+Extension', '~> 0.2'
 ```
-### Old-fashioned way
+### Manual Way
 
 - Add `UIImageView+Extension.h` and `UIImageView+Extension.m` to your project.
 - `#import "UIImageView+Extension.h"` where you want to use the control.
@@ -33,14 +34,19 @@ pod 'UIImageView+Extension', '~> 0.2'
 # API Document
 ### Corner Radius
 
+Setting corner radius is supported in Interface Builder.
+
 ```objective-c
 // Set corner radius.
 _imageView.cornerRadius = 10;
 ```
 
-The method `setImageCornerRadius:`(version 0.2.1 and before) cannot use in this version now.
+The method `setImageCornerRadius:`(version 0.2.1 and before) is not recommended to use in this version now.
 
 ### Shadow
+
+Setting shadow is supported in Interface Builder.
+
 The method `setShadowWithColor:shadowXOffset:shadowYOffset:shadowRadius:`should be invoked before you invoke methods including `changeShadowColor:color`, `changeShadowXOffset:xOffset`, `changeShadowYOffset:yOffset` and `changeShadowRadius:radius`.
 
 ```objective-c
@@ -68,6 +74,17 @@ You can rotate a image view infinitely by the method `startRotate:withClockwise:
 [_imageView stopRotate];
 ```
 
+### Circle
+
+Setting image view to circle is supported in Interface Builder.
+**You must insure your image view is a square(width = height).** We recommend you add `Aspect Ratio` constraint for your image view.
+
+```objective-c
+_imageView.circle = YES;
+```
+
+- Tip: If you set corner radius and circle at same time, corner radius will be invalid.
+
 # Demo App
 A demo project contained in this repository shows how to use UIImageView+Extension from a storyboard.
 
@@ -76,6 +93,10 @@ A demo project contained in this repository shows how to use UIImageView+Extensi
 Another demo app: I used this extension in my app Rate Assistant, you can download this app from App Store: https://itunes.apple.com/app/murate/id1139573801 to see this demo, it is an open source app, you can get the source code from https://github.com/MuShare/Rate-iOS
 
 # Change log
+* version 0.2.2
+  * Set image view to circle.
+  * Set corner radius by setter method directly. 
+
 * version 0.2.1
   * Rotate image view infinitely.
 
