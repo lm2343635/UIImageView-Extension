@@ -13,7 +13,7 @@
 
 @end
 
-@implementation CornerShadowViewController
+IB_DESIGNABLE @implementation CornerShadowViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

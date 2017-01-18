@@ -73,7 +73,6 @@
     self.shadowContainer.clipsToBounds = NO;
     //self.shadowContainerSombine the views
     [self.superview insertSubview:self.shadowContainer atIndex:0];
-
 }
 
 - (BOOL)changeShadowColor:(UIColor *)color {
@@ -138,6 +137,42 @@
         [self setImageCornerRadius:radius];
     } else {
         [self setImageCornerRadius:self.cornerRadius];
+    }
+}
+
+#pragma mark - Blur
+// Set blur effect view
+- (void)setBlurEffectViewWithStyle:(UIBlurEffectStyle)style alpha:(CGFloat)alpha {
+    if (self.effectView != nil) {
+        [self.effectView removeFromSuperview];
+    }
+    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:style];
+    self.effectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    self.effectView.frame = self.bounds;
+    [self addSubview:self.effectView];
+    self.effectView.alpha = alpha;
+}
+
+- (void)changeBlurEffectStyle:(UIBlurEffectStyle)style {
+    if (self.effectView != nil) {
+        [self.effectView removeFromSuperview];
+    }
+    [self setBlurEffectViewWithStyle:style alpha:self.alpha];
+}
+
+- (UIBlurEffectStyle)getBlurEffectStyle {
+    if ([self.blurStyle isEqualToString:@"extraLight"]) {
+        return UIBlurEffectStyleExtraLight;
+    } else if ([self.blurStyle isEqualToString:@"light"]) {
+        return UIBlurEffectStyleLight;
+    } else if ([self.blurStyle isEqualToString:@"dark"]) {
+        return UIBlurEffectStyleDark;
+    } else if ([self.blurStyle isEqualToString:@"regular"]) {
+        return UIBlurEffectStyleRegular;
+    } else if ([self.blurStyle isEqualToString:@"prominent"]) {
+        return UIBlurEffectStyleProminent;
+    } else {
+        return UIBlurEffectStyleRegular;
     }
 }
 
@@ -224,6 +259,52 @@
     if (self.circle != circle) {
         objc_setAssociatedObject(self, @selector(circle), @(circle), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         [self changeToCircle];
+    }
+}
+
+- (NSString *)blurStyle {
+    return objc_getAssociatedObject(self, @selector(blurStyle));
+}
+
+- (void)setBlurStyle:(NSString *)blurStyle {
+    if (self.blurStyle != blurStyle) {
+        objc_setAssociatedObject(self, @selector(blurStyle), blurStyle, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        if (self.alpha > 0 && self.alpha <= 1) {
+            [self setBlurEffectViewWithStyle:[self getBlurEffectStyle]
+                                       alpha:self.blurAlpha];
+        }
+    }
+}
+
+- (CGFloat)blurAlpha {
+    return [objc_getAssociatedObject(self, @selector(blurAlpha)) floatValue];
+}
+
+- (void)setBlurAlpha:(CGFloat)blurAlpha {
+    if (self.blurAlpha != blurAlpha) {
+        if (blurAlpha < 0) {
+            blurAlpha = 0;
+        }
+        if (blurAlpha > 1) {
+            blurAlpha = 1;
+        }
+        objc_setAssociatedObject(self, @selector(blurAlpha), @(blurAlpha), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        if (self.effectView == nil) {
+            [self setBlurEffectViewWithStyle:[self getBlurEffectStyle]
+                                       alpha:blurAlpha];
+        } else {
+            self.effectView.alpha = blurAlpha;
+        }
+    }
+}
+
+- (UIVisualEffectView *)effectView {
+    return objc_getAssociatedObject(self, @selector(effectView));
+}
+
+- (void)setEffectView:(UIVisualEffectView *)effectView {
+    if (self.effectView != effectView) {
+        objc_setAssociatedObject(self, @selector(effectView), effectView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
 }
 

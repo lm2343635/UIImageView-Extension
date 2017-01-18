@@ -46,6 +46,12 @@
 // Circle state
 @property (nonatomic) IBInspectable BOOL circle;
 
+// Blur
+@property (nonatomic) IBInspectable NSString *blurStyle;
+@property (nonatomic) IBInspectable CGFloat blurAlpha;
+// Effect view for blur
+@property (nonatomic, strong) UIVisualEffectView *effectView;
+
 // Set image corner radius.
 - (void)setImageCornerRadius:(CGFloat)radius;
 
@@ -66,5 +72,11 @@
 
 // Stop rotate.
 - (void)stopRotate;
+
+// Set blur effect view
+- (void)setBlurEffectViewWithStyle:(UIBlurEffectStyle)style alpha:(CGFloat)alpha;
+
+// Change blur effect style.
+- (void)changeBlurEffectStyle:(UIBlurEffectStyle)style;
 
 @end

@@ -10,6 +10,8 @@
 		E42425711E27AFB60052A669 /* demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E42425701E27AFB60052A669 /* demo.jpg */; };
 		E4305A321E2CF6BB00010B52 /* circle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E4305A311E2CF6BB00010B52 /* circle.jpg */; };
 		E4305A351E2CF71900010B52 /* CircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4305A341E2CF71900010B52 /* CircleViewController.m */; };
+		E4305A3E1E2F430F00010B52 /* blur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E4305A3D1E2F430F00010B52 /* blur.jpg */; };
+		E4305A441E2F458D00010B52 /* BlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4305A431E2F458D00010B52 /* BlurViewController.m */; };
 		E443BD061E2769B9006140E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E443BD051E2769B9006140E8 /* main.m */; };
 		E443BD091E2769B9006140E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E443BD081E2769B9006140E8 /* AppDelegate.m */; };
 		E443BD0C1E2769B9006140E8 /* CornerShadowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E443BD0B1E2769B9006140E8 /* CornerShadowViewController.m */; };
@@ -41,6 +43,10 @@
 		E4305A311E2CF6BB00010B52 /* circle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = circle.jpg; sourceTree = "<group>"; };
 		E4305A331E2CF71900010B52 /* CircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleViewController.h; sourceTree = "<group>"; };
 		E4305A341E2CF71900010B52 /* CircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleViewController.m; sourceTree = "<group>"; };
+		E4305A3D1E2F430F00010B52 /* blur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blur.jpg; sourceTree = "<group>"; };
+		E4305A3F1E2F452D00010B52 /* UIImageView+Extension Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Extension Demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		E4305A421E2F458D00010B52 /* BlurViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurViewController.h; sourceTree = "<group>"; };
+		E4305A431E2F458D00010B52 /* BlurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurViewController.m; sourceTree = "<group>"; };
 		E443BD011E2769B9006140E8 /* UIImageView+Extension Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIImageView+Extension Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E443BD051E2769B9006140E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E443BD071E2769B9006140E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +101,8 @@
 				E4CA26071E2910C5007D51C8 /* RotateViewController.m */,
 				E4CA26031E290AD9007D51C8 /* TableViewController.h */,
 				E4CA26041E290AD9007D51C8 /* TableViewController.m */,
+				E4305A421E2F458D00010B52 /* BlurViewController.h */,
+				E4305A431E2F458D00010B52 /* BlurViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -138,8 +146,10 @@
 		E443BD041E2769B9006140E8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E42425701E27AFB60052A669 /* demo.jpg */,
+				E4305A3F1E2F452D00010B52 /* UIImageView+Extension Demo-Bridging-Header.h */,
+				E4305A3D1E2F430F00010B52 /* blur.jpg */,
 				E4305A311E2CF6BB00010B52 /* circle.jpg */,
+				E42425701E27AFB60052A669 /* demo.jpg */,
 				E443BD051E2769B9006140E8 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -222,6 +232,7 @@
 				TargetAttributes = {
 					E443BD001E2769B9006140E8 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					E443BD191E2769BA006140E8 = {
@@ -259,6 +270,7 @@
 				E443BD141E2769B9006140E8 /* LaunchScreen.storyboard in Resources */,
 				E4E1C6F11E278FCC00A62D66 /* UIImageView+Extension.podspec in Resources */,
 				E4305A321E2CF6BB00010B52 /* circle.jpg in Resources */,
+				E4305A3E1E2F430F00010B52 /* blur.jpg in Resources */,
 				E443BD111E2769B9006140E8 /* Assets.xcassets in Resources */,
 				E443BD0F1E2769B9006140E8 /* Main.storyboard in Resources */,
 				E42425711E27AFB60052A669 /* demo.jpg in Resources */,
@@ -284,6 +296,7 @@
 				E4CA26081E2910C5007D51C8 /* RotateViewController.m in Sources */,
 				E4305A351E2CF71900010B52 /* CircleViewController.m in Sources */,
 				E4CA26051E290AD9007D51C8 /* TableViewController.m in Sources */,
+				E4305A441E2F458D00010B52 /* BlurViewController.m in Sources */,
 				E443BD091E2769B9006140E8 /* AppDelegate.m in Sources */,
 				E4CA26001E27CC0A007D51C8 /* README.md in Sources */,
 				E443BD3D1E276ABD006140E8 /* UIImageView+Extension.m in Sources */,
@@ -423,11 +436,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "UIImageView+Extension Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pw.fczm.app.UIImageView-Extension-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UIImageView+Extension Demo/UIImageView+Extension Demo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -435,11 +452,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "UIImageView+Extension Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pw.fczm.app.UIImageView-Extension-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UIImageView+Extension Demo/UIImageView+Extension Demo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
