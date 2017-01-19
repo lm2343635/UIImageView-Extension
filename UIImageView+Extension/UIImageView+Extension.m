@@ -71,8 +71,10 @@
     self.shadowContainer.layer.shadowOpacity = 1;
     self.shadowContainer.layer.cornerRadius = self.layer.cornerRadius;
     self.shadowContainer.clipsToBounds = NO;
-    //self.shadowContainerSombine the views
+    // Add shadow container to super view.
     [self.superview insertSubview:self.shadowContainer atIndex:0];
+    // Add layout constraint for shadow container.
+    [self equalToImageViewConstraintFor:self.shadowContainer];
 }
 
 - (BOOL)changeShadowColor:(UIColor *)color {
@@ -151,6 +153,8 @@
     self.effectView.frame = self.bounds;
     [self addSubview:self.effectView];
     self.effectView.alpha = alpha;
+    // Add layout constraint for effect view.
+    [self equalToImageViewConstraintFor:self.effectView];
 }
 
 - (void)changeBlurEffectStyle:(UIBlurEffectStyle)style {
@@ -174,6 +178,42 @@
     } else {
         return UIBlurEffectStyleRegular;
     }
+}
+
+#pragma mark - Service
+// Set constraint for a view, this view's position and size will be same with image view(self).
+- (void)equalToImageViewConstraintFor:(UIView *)view {
+    view.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.superview addConstraints:[NSArray arrayWithObjects:
+                                    [NSLayoutConstraint constraintWithItem:self
+                                                                 attribute:NSLayoutAttributeLeft
+                                                                 relatedBy:NSLayoutRelationEqual
+                                                                    toItem:view
+                                                                 attribute:NSLayoutAttributeLeft
+                                                                multiplier:1
+                                                                  constant:0],
+                                    [NSLayoutConstraint constraintWithItem:self
+                                                                 attribute:NSLayoutAttributeRight
+                                                                 relatedBy:NSLayoutRelationEqual
+                                                                    toItem:view
+                                                                 attribute:NSLayoutAttributeRight
+                                                                multiplier:1
+                                                                  constant:0],
+                                    [NSLayoutConstraint constraintWithItem:self
+                                                                 attribute:NSLayoutAttributeBottom
+                                                                 relatedBy:NSLayoutRelationEqual
+                                                                    toItem:view
+                                                                 attribute:NSLayoutAttributeBottom
+                                                                multiplier:1
+                                                                  constant:0],
+                                    [NSLayoutConstraint constraintWithItem:self
+                                                                 attribute:NSLayoutAttributeTop
+                                                                 relatedBy:NSLayoutRelationEqual
+                                                                    toItem:view
+                                                                 attribute:NSLayoutAttributeTop
+                                                                multiplier:1
+                                                                  constant:0],
+                                    nil]];
 }
 
 #pragma mark - Properties
