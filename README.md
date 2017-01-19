@@ -73,6 +73,24 @@ You can rotate a image view infinitely by the method `startRotate:withClockwise:
 // Change shadow color, offset and radius.
 [_imageView stopRotate];
 ```
+### Blur
+Setting blur is supported in Interface Builder. You can set blur style including
+
+- **extraLight** (UIBlurEffectStyleExtraLight)
+- **light** (UIBlurEffectStyleLight)
+- **dark** (UIBlurEffectStyleDark)
+- **regular** (UIBlurEffectStyleRegular)
+- **prominent** (UIBlurEffectStyleProminent)
+
+and blur alpha(0 < alpha <= 1) directly in in Interface Builder. The default style is regular.
+
+```objective-c
+// Change blur style, here use the enum UIBlurEffectStyle.
+[_imageView changeBlurEffectStyle:UIBlurEffectStyleExtraLight];
+
+// Change blur alpha.
+_imageView.blurAlpha = 0.5;
+```
 
 ### Circle
 
@@ -93,6 +111,10 @@ A demo project contained in this repository shows how to use UIImageView+Extensi
 Another demo app: I used this extension in my app Rate Assistant, you can download this app from App Store: https://itunes.apple.com/app/murate/id1139573801 to see this demo, it is an open source app, you can get the source code from https://github.com/MuShare/Rate-iOS
 
 # Change log
+* version 0.2.3
+  * Blur image view. 
+  * Fix the constraint bug for shadow. This version fixed the bug that position and size of a shadow will be wrong if image view has some constraint in the old version.
+
 * version 0.2.2
   * Set image view to circle.
   * Set corner radius by setter method directly. 
