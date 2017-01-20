@@ -47,20 +47,14 @@ The method `setImageCornerRadius:`(version 0.2.1 and before) is not recommended 
 
 Setting shadow is supported in Interface Builder.
 
-The method `setShadowWithColor:shadowXOffset:shadowYOffset:shadowRadius:`should be invoked before you invoke methods including `changeShadowColor:color`, `changeShadowXOffset:xOffset`, `changeShadowYOffset:yOffset` and `changeShadowRadius:radius`.
+You can also set them in your code. Shadow color and radius are necessary to create a shadow. Shadow will be shown after you set shadow color and radius.
 
 ```objective-c
-// Init a shadow with color, offset and raduis.
-[_imageView setShadowWithColor:[UIColor darkGrayColor]
-                 shadowXOffset:0
-                 shadowYOffset:0
-                  shadowRadius:5.0];
-
 // Change shadow color, offset and radius.
-[_imageView changeShadowColor:[UIColor redColor]];
-[_imageView changeShadowRadius:1.0];
-[_imageView changeShadowXOffset:1.0];
-[_imageView changeShadowYOffset:1.0];
+_imageView.shadowColor = [UIColor redColor];
+_imageView.shadowRadius = 1.0;
+_imageView.shadowXOffset = 1.0;
+_imageView.shadowYOffset = 1.0;
 ```
 
 ### Rotate
@@ -111,6 +105,10 @@ A demo project contained in this repository shows how to use UIImageView+Extensi
 Another demo app: I used this extension in my app Rate Assistant, you can download this app from App Store: https://itunes.apple.com/app/murate/id1139573801 to see this demo, it is an open source app, you can get the source code from https://github.com/MuShare/Rate-iOS
 
 # Change log
+* version 0.2.4
+  * Shadow container needs not init manually, so we removed setImageCornerRadius and setShadowWithColor method from interface.
+  * Fix the issue that image view(circle attribute ON) is not cirle with auto layout.
+
 * version 0.2.3
   * Blur image view. 
   * Fix the constraint bug for shadow. This version fixed the bug that position and size of a shadow will be wrong if image view has some constraint in the old version.
