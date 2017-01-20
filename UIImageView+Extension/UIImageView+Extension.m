@@ -31,13 +31,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Set shadow if shadow color is not nil and shadow radiud is large than 0.
-    if (self.shadowColor != nil && self.shadowRadius > 0) {
-        [self setShadowWithColor:self.shadowColor
-                   shadowXOffset:self.shadowXOffset
-                   shadowYOffset:self.shadowXOffset
-                    shadowRadius:self.shadowRadius];
-    }
+    
 }
 
 - (void)layoutSubviews {
@@ -82,39 +76,17 @@
     [self equalToImageViewConstraintFor:self.shadowContainer];
 }
 
-- (BOOL)changeShadowColor:(UIColor *)color {
-    if (self.shadowContainer == nil) {
+// Init shadow if shadow is not exist, shadow color is not nil and shadow radiud is large than 0.
+// If shadow is exist, return YES.
+// If shadow is not exist(shadow container is nil), return NO.
+- (BOOL)initShadowContainerIfNotExist {
+    if (self.shadowContainer == nil && self.shadowColor != nil && self.shadowRadius > 0) {
+        [self setShadowWithColor:self.shadowColor
+                   shadowXOffset:self.shadowXOffset
+                   shadowYOffset:self.shadowXOffset
+                    shadowRadius:self.shadowRadius];
         return NO;
     }
-    self.shadowColor = color;
-    self.shadowContainer.layer.shadowColor = color.CGColor;
-    return YES;
-}
-
-- (BOOL)changeShadowXOffset:(CGFloat)xOffset {
-    if (self.shadowContainer == nil) {
-        return NO;
-    }
-    self.shadowXOffset = xOffset;
-    self.shadowContainer.layer.shadowOffset = CGSizeMake(xOffset, self.shadowYOffset);
-    return YES;
-}
-
-- (BOOL)changeShadowYOffset:(CGFloat)yOffset {
-    if (self.shadowContainer == nil) {
-        return NO;
-    }
-    self.shadowYOffset = yOffset;
-    self.shadowContainer.layer.shadowOffset = CGSizeMake(self.shadowXOffset, yOffset);
-    return YES;
-}
-
-- (BOOL)changeShadowRadius:(CGFloat)radius {
-    if (self.shadowContainer == nil) {
-        return NO;
-    }
-    self.shadowRadius = radius;
-    self.shadowContainer.layer.shadowRadius = radius;
     return YES;
 }
 
@@ -253,6 +225,9 @@
 - (void)setShadowColor:(UIColor *)shadowColor {
     if (self.shadowColor != shadowColor) {
         objc_setAssociatedObject(self, @selector(shadowColor), shadowColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        if ([self initShadowContainerIfNotExist]) {
+            self.shadowContainer.layer.shadowColor = shadowColor.CGColor;
+        }
     }
 }
 
@@ -263,6 +238,9 @@
 - (void)setShadowXOffset:(CGFloat)shadowXOffset {
     if (self.shadowXOffset != shadowXOffset) {
         objc_setAssociatedObject(self, @selector(shadowXOffset), @(shadowXOffset), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        if ([self initShadowContainerIfNotExist]) {
+            self.shadowContainer.layer.shadowOffset = CGSizeMake(shadowXOffset, self.shadowYOffset);
+        }
     }
 }
 
@@ -273,6 +251,9 @@
 - (void)setShadowYOffset:(CGFloat)shadowYOffset {
     if (self.shadowYOffset != shadowYOffset) {
         objc_setAssociatedObject(self, @selector(shadowYOffset), @(shadowYOffset), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        if ([self initShadowContainerIfNotExist]) {
+            self.shadowContainer.layer.shadowOffset = CGSizeMake(self.shadowXOffset, shadowYOffset);
+        }
     }
 }
 
@@ -283,6 +264,9 @@
 - (void)setShadowRadius:(CGFloat)shadowRadius {
     if (self.shadowRadius != shadowRadius) {
         objc_setAssociatedObject(self, @selector(shadowRadius), @(shadowRadius), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        if ([self initShadowContainerIfNotExist]) {
+            self.shadowContainer.layer.shadowRadius = shadowRadius;
+        }
     }
 }
 
@@ -303,6 +287,7 @@
 - (void)setCircle:(BOOL)circle {
     if (self.circle != circle) {
         objc_setAssociatedObject(self, @selector(circle), @(circle), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        [self changeToCircle];
     }
 }
 

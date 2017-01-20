@@ -61,12 +61,6 @@
              shadowYOffset:(CGFloat)yOffset
               shadowRadius:(CGFloat)radius;
 
-// Change shadow color, offset and radius.
-- (BOOL)changeShadowColor:(UIColor *)color;
-- (BOOL)changeShadowXOffset:(CGFloat)xOffset;
-- (BOOL)changeShadowYOffset:(CGFloat)yOffset;
-- (BOOL)changeShadowRadius:(CGFloat)radius;
-
 // Start rotate infinitely
 - (void)startRotate:(double)secondPerRound withClockwise:(BOOL)clockwise;
 

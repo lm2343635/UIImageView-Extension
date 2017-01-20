@@ -25,33 +25,33 @@ IB_DESIGNABLE @implementation CornerShadowViewController
 }
 
 - (IBAction)changeShadowRadius:(UIStepper *)sender {
-    [_imageView changeShadowRadius:sender.value];
+    _imageView.shadowRadius = sender.value;
     _shadowRadiusLabel.text = [NSString stringWithFormat:@"%d", (int)sender.value];
 }
 
 - (IBAction)changeShadowXOffset:(UIStepper *)sender {
-    [_imageView changeShadowXOffset:sender.value];
+    _imageView.shadowXOffset = sender.value;
     _shadowXOffsetLabel.text = [NSString stringWithFormat:@"%d", (int)sender.value];
 }
 
 - (IBAction)changeShadowYOffset:(UIStepper *)sender {
-    [_imageView changeShadowYOffset:sender.value];
+    _imageView.shadowYOffset = sender.value;
     _shadowYOffsetLabel.text = [NSString stringWithFormat:@"%d", (int)sender.value];
 }
 
 - (IBAction)changeShadowColor:(UISegmentedControl *)sender {
     switch (sender.selectedSegmentIndex) {
         case 0:
-            [_imageView changeShadowColor:[UIColor darkGrayColor]];
+            _imageView.shadowColor = [UIColor darkGrayColor];
             break;
         case 1:
-            [_imageView changeShadowColor:[UIColor redColor]];
+            _imageView.shadowColor = [UIColor redColor];
             break;
         case 2:
-            [_imageView changeShadowColor:[UIColor yellowColor]];
+            _imageView.shadowColor = [UIColor yellowColor];
             break;
         case 3:
-            [_imageView changeShadowColor:[UIColor blueColor]];
+            _imageView.shadowColor = [UIColor blueColor];
             break;
         default:
             break;
