@@ -40,6 +40,11 @@
     }
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [self changeToCircle];
+}
+
 #pragma mark - Corner Radius
 - (void)setImageCornerRadius: (CGFloat)radius {
     self.layer.cornerRadius = radius;
@@ -133,8 +138,8 @@
 #pragma mark - Circle
 - (void)changeToCircle {
     if (self.circle) {
-        CGFloat width = self.frame.size.width;
-        CGFloat height = self.frame.size.height;
+        CGFloat width = self.bounds.size.width;
+        CGFloat height = self.bounds.size.height;
         CGFloat radius = (width > height ? height : width) / 2;
         [self setImageCornerRadius:radius];
     } else {
@@ -298,7 +303,6 @@
 - (void)setCircle:(BOOL)circle {
     if (self.circle != circle) {
         objc_setAssociatedObject(self, @selector(circle), @(circle), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-        [self changeToCircle];
     }
 }
 

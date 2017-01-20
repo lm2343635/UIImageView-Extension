@@ -142,9 +142,8 @@
                                     <action selector="changeCircleState:" destination="H97-4E-ZKU" eventType="valueChanged" id="b5g-VI-GH4"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Circle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3p-Z2-53t">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Circle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3p-Z2-53t">
                                 <rect key="frame" x="16" y="448" width="44" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -152,11 +151,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oBR-hv-TRA" firstAttribute="top" secondItem="914-pJ-ako" secondAttribute="bottom" constant="17" id="2GV-W1-O1W"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oBR-hv-TRA" secondAttribute="trailing" id="JXv-dZ-0Fr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="914-pJ-ako" secondAttribute="trailing" id="QBR-Vu-ZJE"/>
                             <constraint firstItem="914-pJ-ako" firstAttribute="top" secondItem="rCH-kD-gwE" secondAttribute="bottom" constant="19" id="aph-uM-Fa2"/>
                             <constraint firstAttribute="leadingMargin" secondItem="914-pJ-ako" secondAttribute="leading" id="jc5-f7-4gE"/>
-                            <constraint firstItem="oBR-hv-TRA" firstAttribute="top" secondItem="rCH-kD-gwE" secondAttribute="bottom" constant="379" id="kep-w2-8lb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="C3p-Z2-53t" secondAttribute="leading" id="q7j-iW-FWE"/>
+                            <constraint firstItem="C3p-Z2-53t" firstAttribute="top" secondItem="914-pJ-ako" secondAttribute="bottom" constant="22" id="tsU-31-Dr6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Circle" id="HEh-G3-yT4"/>
