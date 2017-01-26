@@ -114,7 +114,7 @@
         CGFloat height = self.bounds.size.height;
         CGFloat radius = (width > height ? height : width) / 2;
         [self setImageCornerRadius:radius];
-    } else {
+    } else if (!self.circle && self.cornerRadius > 0) {
         [self setImageCornerRadius:self.cornerRadius];
     }
 }
