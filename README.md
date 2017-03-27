@@ -76,7 +76,7 @@ Setting blur is supported in Interface Builder. You can set blur style including
 - **regular** (UIBlurEffectStyleRegular)
 - **prominent** (UIBlurEffectStyleProminent)
 
-and blur alpha(0 < alpha <= 1) directly in in Interface Builder. The default style is regular.
+and blur alpha(0 < alpha <= 1) directly in the Interface Builder. The default style is regular.
 
 ```objective-c
 // Change blur style, here use the enum UIBlurEffectStyle.
