@@ -27,7 +27,7 @@ pod 'UIImageView+Extension', '~> 0.2'
 
 - If you just want to set features in Interface Builder, just do it in Interface Builder, you need not to do anything.
 
-![Interface Builder Guide](https://raw.githubusercontent.com/lm2343635/UIImageView-Extension/master/Screenshoots/InterfaceBuilderGuide.png)
+![Interface Builder Guide](https://raw.githubusercontent.com/lm2343635/UIImageView-Extension/master/screenshot/InterfaceBuilderGuide.png)
 
 - If you want to control your image view in your program, you should import the category header: `#import "UIImageView+Extension.h"` to your `.h` or `.m` file.
 
@@ -100,7 +100,7 @@ _imageView.circle = YES;
 # Demo App
 A demo project contained in this repository shows how to use UIImageView+Extension from a storyboard.
 
-![Demo App](https://raw.githubusercontent.com/lm2343635/UIImageView-Extension/master/Screenshoots/DemoApp.png)
+![Demo App](https://raw.githubusercontent.com/lm2343635/UIImageView-Extension/master/screenshot/DemoApp.png)
 
 Another demo app: I used this extension in my app Rate Assistant, you can download this app from App Store: https://itunes.apple.com/app/murate/id1139573801 to see this demo, it is an open source app, you can get the source code from https://github.com/MuShare/Rate-iOS
 
