@@ -1,0 +1,3 @@
+language: objective-c
+xcode_project: UIImageView+Extension Demo.xcodeproj 
+xcode_scheme: UIImageView+Extension Demo
