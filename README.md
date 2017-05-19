@@ -1,4 +1,4 @@
-UIImageView+Extension ![Supported Platforms](https://img.shields.io/cocoapods/p/UIImageView+Extension.svg) [![Latest pod release](https://img.shields.io/cocoapods/v/UIImageView+Extension.svg)](https://cocoapods.org/pods/UIImageView+Extension) [![Build Status](https://travis-ci.org/alexandreos/UIImageView+Extension.svg?branch=master)]() [![License](https://img.shields.io/cocoapods/l/UIImageView+Extension.svg)](https://github.com/lm2343635/UIImageView-Extension/LICENSE)
+UIImageView+Extension ![Supported Platforms](https://img.shields.io/cocoapods/p/UIImageView+Extension.svg) [![Latest pod release](https://img.shields.io/cocoapods/v/UIImageView+Extension.svg)](https://cocoapods.org/pods/UIImageView+Extension) [![Build Status](https://travis-ci.org/lm2343635/UIImageView-Extension.svg?branch=master)](https://travis-ci.org/lm2343635/UIImageView-Extension) [![License](https://img.shields.io/cocoapods/l/UIImageView+Extension.svg)](https://github.com/lm2343635/UIImageView-Extension/LICENSE)
 ===
 A simple UIImageView category with some extension functions.
 
