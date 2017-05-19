@@ -1,3 +1,5 @@
 language: objective-c
-xcode_project: UIImageView+Extension Demo.xcodeproj 
-xcode_scheme: UIImageView+Extension Demo
+osx_image: xcode8.3
+
+build:
+  set -o pipefail && xcodebuild -project "UIImageView+Extension Demo.xcodeproj" -scheme "UIImageView+Extension Demo" -sdk iphonesimulator -destination 'name=iPhone 6' build CODE_SIGNING_REQUIRED=NO
