@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode8.3
+osx_image: xcode9.3
 
-build:
-  set -o pipefail && xcodebuild -project "UIImageView+Extension Demo.xcodeproj" -scheme "UIImageView+Extension Demo" -sdk iphonesimulator -destination 'name=iPhone 6' build CODE_SIGNING_REQUIRED=NO
+script:
+  - set -o pipefail && xcodebuild -project "UIImageView+Extension Demo.xcodeproj" -scheme "UIImageView+Extension Demo" -sdk iphonesimulator build CODE_SIGNING_REQUIRED=NO | xcpretty -c 
