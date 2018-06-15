@@ -105,6 +105,14 @@ A demo project contained in this repository shows how to use UIImageView+Extensi
 Another demo app: I used this extension in my app Rate Assistant, you can download this app from App Store: https://itunes.apple.com/app/murate/id1139573801 to see this demo, it is an open source app, you can get the source code from https://github.com/MuShare/Rate-iOS
 
 # Change log
+
+* version 0.2.6
+  * Set userInteractionEnabled in the shadow container to make image view clickale.
+  * Give a tip when the image view has no parent view. 
+
+* version 0.2.5.1
+  * Fix some issues.
+
 * version 0.2.5
   * Fix the issue that UIImageView+Extension will affect the display of split line in UISegmentedControl.
 
