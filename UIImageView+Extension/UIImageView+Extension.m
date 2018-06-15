@@ -56,10 +56,15 @@
              shadowXOffset:(CGFloat)xOffset
              shadowYOffset:(CGFloat)yOffset
               shadowRadius:(CGFloat)radius {
+    if (self.superview == nil) {
+        NSLog(@"WRNING: a parent view of the image view is necessary to add a shadow view.");
+        return;
+    }
     if (self.shadowContainer != nil) {
         [self.shadowContainer removeFromSuperview];
     }
     self.shadowContainer = [[UIView alloc] initWithFrame: self.frame];
+    self.shadowContainer.userInteractionEnabled = NO;
     // Background color is necessary, reason is unknown now.
     // Any color is OK, if background color is not set, there is no shadow.
     self.shadowContainer.backgroundColor = [UIColor whiteColor];
@@ -149,11 +154,23 @@
     } else if ([self.blurStyle isEqualToString:@"dark"]) {
         return UIBlurEffectStyleDark;
     } else if ([self.blurStyle isEqualToString:@"regular"]) {
-        return UIBlurEffectStyleRegular;
+        if (@available(iOS 10.0, *)) {
+            return UIBlurEffectStyleRegular;
+        } else {
+            return UIBlurEffectStyleLight;
+        }
     } else if ([self.blurStyle isEqualToString:@"prominent"]) {
-        return UIBlurEffectStyleProminent;
+        if (@available(iOS 10.0, *)) {
+            return UIBlurEffectStyleProminent;
+        } else {
+            return UIBlurEffectStyleLight;
+        }
     } else {
-        return UIBlurEffectStyleRegular;
+        if (@available(iOS 10.0, *)) {
+            return UIBlurEffectStyleRegular;
+        } else {
+            return UIBlurEffectStyleLight;
+        }
     }
 }
 
@@ -338,3 +355,4 @@
 }
 
 @end
+
