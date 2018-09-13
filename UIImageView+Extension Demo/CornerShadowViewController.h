@@ -21,6 +21,7 @@
 - (IBAction)changeShadowXOffset:(UIStepper *)sender;
 - (IBAction)changeShadowYOffset:(UIStepper *)sender;
 - (IBAction)changeShadowColor:(UISegmentedControl *)sender;
+- (IBAction)changeIsHidden:(UISwitch *)sender;
 
 @end
 

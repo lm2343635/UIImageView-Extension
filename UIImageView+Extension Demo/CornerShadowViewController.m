@@ -58,4 +58,8 @@ IB_DESIGNABLE @implementation CornerShadowViewController
     }
 }
 
+- (IBAction)changeIsHidden:(UISwitch *)sender {
+    [_imageView setHidden: !sender.isOn];
+}
+
 @end

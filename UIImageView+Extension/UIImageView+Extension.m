@@ -79,6 +79,13 @@
     [self.superview insertSubview:self.shadowContainer atIndex:0];
     // Add layout constraint for shadow container.
     [self equalToImageViewConstraintFor:self.shadowContainer];
+    
+    [self addObserver:self
+           forKeyPath:@"isHidden"
+              options:NSKeyValueObservingOptionNew
+              context:nil];
+    
+    
 }
 
 // Init shadow if shadow is not exist, shadow color is not nil and shadow radiud is large than 0.
@@ -93,6 +100,12 @@
         return NO;
     }
     return YES;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"isHidden"]) {
+        NSLog(@"%@", object);
+    }
 }
 
 #pragma mark - Rotate
